@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="icon" type="./image/.png" sizes="16x16"  href="./images/favicon.png">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <section class="container-comments"> 
+        <div class="title">
+            <h1>Deixe seu comentário</h1>
+        </div>
+        <p class="alert"></p>
+        <div class="comments-form">
+            <form action="" id="formId">
+                <div class="field">
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="field">
+                    <textarea name="mensagem" id="msg" placeholder="Digite sua mensagem"></textarea>
+                </div>
+                <div class="container-btns">
+                    <button type="submit" id="btn-send" class="btn-default btn-public">Publicar Comentário</button>
+                </div>
+            </form>
+        </div>        
+
+    </section>
+
+    <div class="grid-comments">
+        <h2 class="hide">Comentário (<span class="qtda"></span>)</h2>
+        <div class="content-grid">
+            
+        </div>
+    </div>
+
+    <!--TEMPLATE CLONE-->
+
+    <div class="comments-container hide">
+        <div class="image">
+            <img src="./images/img-1.jpg" id="img" />       
+        </div>
+        <div class="content">
+            <div class="users">
+                <span class="name">Leandro</span>
+                <span class="date">30/06/2023</span>
+            </div>
+            <div class="comments">Comentario de teste!</div>
+            <div class="answer">
+                <button class="btn link-answer" onclick="responderComentario(this)">Responder</button>
+                <button class="btn link-exclude" onclick="deleteComments(this)">Excluir</button>
+            </div>
+           
+            <div class="comments-form" style="display: none;">
+                <div class="field">
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="field">
+                    <textarea name="mensagem" id="msg" placeholder="Digite sua mensagem"></textarea>
+                </div>
+                <div class="field-row">
+                    <button onclick="adicionarResposta(this)" class="btn-default btn-response">Responder Comentário</button>
+                    <span>
+                        <input type="checkbox" name="anonimo" id="anonimo">
+                        <label for="anonimo">Anônimo</label>
+                    </span>
+                </div>
+            </div>
+
+        
+        </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
